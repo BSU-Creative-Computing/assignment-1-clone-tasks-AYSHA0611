@@ -1,0 +1,310 @@
+body{
+    margin:0; /*Reset body margins*/
+    background-color:#c0c0c0; /*Set body background color*/
+}
+/*Define nav container*/
+nav{
+    width:100%;  /* Set width to 100% */
+    height:60px; /* Set height to 60px */
+    background-color:dodgerblue; /* Set background color to dodgerblue */
+    color:white; /* Set text color to white */
+    display:flex; /* Set display to flex */
+    justify-content:space-between; /* Distribute items evenly */
+    align-items:center;  /* Align items vertically to center */
+    padding:0px ; /* Remove padding */
+    position: fixed; /* Set position to fixed */
+    top:0; /* Position at the top of the page */
+}
+/*Styling of logo*/
+.logo{
+    font-size:25px; /* set font size to 25px */
+    font-weight: bold; /* set font weight to bold */
+    margin-left:3%; /* add 3% margin on the left */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /* use specific font-family */
+}
+/*Styling of menu*/
+.menu{
+    width:50%; /* set menu width */
+    display:flex;  /* set menu to flex */
+    justify-content: right;  /* align items to right */
+    list-style: none; /* remove list style */
+}
+.menu li {
+    margin-right: 20px; /* Apply right margin to menu list items */
+}
+.menu li a{
+    font-size: 15px; /*set to font size*/
+    color:white; /*set text color to white*/
+    text-decoration: none;/*set text decoration to none*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;/*use specific font-family*/
+}
+/*styling of search container*/
+.search{
+    margin-left:20%; /* Add 20% left margin */
+}
+
+.search input{
+    /* add padding and set border */
+    padding:10px;
+    border:1px solid black;
+}
+
+/*styling of h1*/
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;/*font-family*/
+    margin-left:0px; /* Remove left margin */
+    font-size: medium; /* Set font-size to medium */
+}
+
+/*styling of paragraph*/
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /*font-family*/
+    font-size:small;   /* Sets font size to small. */
+    margin-left:0px;  /* No margin on left side. */
+    margin-right:25px;  /* Sets margin on right side to 25px. */
+    padding-right: 35px; /* Adds padding to the right side of the paragraph. */
+}
+
+/*styling of button*/
+button{
+    background-color: rgb(61, 61, 169); /* Set button background color */
+    color:white;  /* Set button text color to white */
+    padding:6px;  /* Set button padding to 6px */
+    float:right;  /* Float button to the right */
+    margin-right:20%; /* Set button margin to the right */
+}
+.item3 p {
+    margin-left:10px;  /* Margin-left 10px */
+}
+.item3 h1{
+    margin-left: 10px; /* align heading left */
+}
+.item4 p{
+    margin-left:20px;/* Center content, indent by 20px */
+}
+.item4 h1{
+    margin-left:20px; /*20px as margin-left*/
+}
+.item5 p{
+    margin-left:5%; /*5% as margin-left*/
+}
+.item5 h1{
+    margin-left:5%; /*5% as margin-left*/
+}
+
+.item1{
+    padding:5px;
+    padding-left:15px;
+    background-color: white;box-shadow: 2px 2px 2px 2px white;
+}
+.item2{
+    padding:5px;
+    padding-left:25px;
+    background-color: white;box-shadow: 2px 2px 2px 2px white;
+}
+
+.item3{
+    padding: 5px;
+    padding-left:25px;
+    background-color: white;box-shadow: 2px 2px 2px 2px white;
+}
+
+.item4{
+    padding: 10px;
+    background-color: white;box-shadow: 2px 2px 2px 2px white;
+    margin-top:0;
+}
+.item5{
+    padding:10px;
+    background-color: white;box-shadow: 2px 2px 2px 2px white;
+}
+footer p{
+    text-align: center;/* Align footer text to center */
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media screen and (max-width:480px){
+    /* Styles for the container element inside the media query */
+    .container{
+            display:grid;
+            grid-template-columns: 1fr ;
+            grid-gap: 10px;
+            padding-left:3px;
+            padding-right:30%;
+    }
+    /* Hide the search element at this screen width */
+    .search{
+        display:none;
+    }
+    /* Adjust styles for the images within different items */
+    .item1 img {
+        width:100vh;
+    }
+    .item2 img{
+        width:95vh;
+    }
+    .item3 img{
+        width:95vh;
+        padding: 5px;
+    }
+    .item4 img{
+        width:95vh;
+        padding:20px;
+    }
+    .item5 img{
+        width:95vh;
+        padding: 20px;
+    }
+    
+}
+/* Media query for screens with a width between 481px and 800px */
+@media screen and (min-width:481px) and (max-width:800px){
+    /* Styles for the container element inside the media query */
+    .container{
+        display:grid;
+        grid-template-columns: repeat(2,280px);
+        grid-gap:10px;
+    }
+    /* Adjust styles for the images within different items */
+    .item1 img{
+        width:100%;
+    }
+    .item2 img{
+        width:50vh;
+    }
+    .item3 img{
+        width:50vh;
+    }
+    .item4 img{
+        width:50vh;
+    }
+    .item5 img{
+        width:50vh;
+    }
+    /* Adjust grid layout for specific items */
+    .item1{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .item2{
+        grid-row-start: 2;
+    }
+    .item3{
+        grid-column: 2/ 3;
+    }
+}
+
+/* Media query for screens with a width between 801px and 1024px */
+@media screen and (min-width: 801px) and (max-width: 1024px){
+    /* Styles for the container element inside the media query */
+    .container{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr ;
+        grid-gap:10px;
+        margin-left:10px;
+        margin-left:10px;
+        margin-right:10px;
+    }
+    /* Adjust styles for the images within different items */
+    .item1 img {
+        width:100vh;
+    }
+    .item2 img{
+        width:40vh;
+    }
+    .item3 img{
+        width:40vh;
+        padding: 5px;
+    }
+    .item4 img{
+        width:40vh;
+        padding:20px;
+    }
+    .item5 img{
+        width:40vh;
+        padding: 20px;
+    }
+     /* Adjust grid layout for specific items */
+    .item3{
+        grid-column:2 / 3;
+    }
+    .item4{
+        grid-column: 2 / 3;
+    }
+    .item5{
+        grid-column: 2/3;
+    }
+}
+
+/* Media query for screens with a width between 1025px and 1281px */
+@media screen and (min-width: 1025px) and (max-width: 1281px) {
+    /* Styles for the container element inside the media query */
+    .container{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:10px;
+        margin-left:10px;
+        margin-right:20px;
+    }
+    /* Adjust styles for the images within different items */
+    .item1 img {
+        width:90vh;
+    }
+    .item2 img{
+        width:40vh;
+        padding:10px;
+    }
+    .item3 img{
+        width:40vh;
+        padding: 10px;
+    }
+    .item4 img{
+        width:40vh;
+        padding:10px;
+    }
+    .item5 img{
+        width:40vh;
+        padding: 10px;
+    }
+    /* Adjust grid layout for specific items */
+    .item4{
+        grid-column-start: 2;
+    }
+    
+}
+
+/* Media query for screens with a minimum width of 1280px */
+@media screen and (min-width:1280px){
+    /* Styles for the container element inside the media query */
+    .container{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
+        margin-left: 6%;
+        margin-right: 10%;
+    }
+    /* Adjust styles for the images within different items */
+    .item1 img {
+        width:75vh;
+    }
+    .item2 img{
+        width:34vh;
+        padding:10px;
+    }
+    .item3 img{
+        width:35vh;
+        padding: 2px;
+    }
+    .item4 img{
+        width:35vh;
+        padding:10px;
+    }
+    .item5 img{
+        width:35vh;
+        padding: 10px;
+    }
+    /* Adjust grid layout for specific items */
+    .item4{
+        grid-column-start: 2;
+    }
+}

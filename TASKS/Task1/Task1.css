@@ -1,0 +1,60 @@
+body{
+    margin:0; /*set margin to 0 for the body*/
+}
+.section img{
+    width:30%; /*set width to 30% of section*/
+}
+.section{
+    font-size: 0;/*set font-size 0 for section*/
+}
+
+/*styling of paragraph*/
+p{
+    margin-left:5px; 
+    margin-right:5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+footer{
+    /*styling of footer*/
+    background-color:black;
+    color:white;
+    text-align: center;
+    padding:15px 0;
+}
+/*Responsive CSS*/
+/*This styles the body tag when the viewport is 1025px or more.
+It sets the margin to 10% and increases the .section to 110%.*/
+@media screen and (min-width:1025px){
+    body{
+        margin-left:10%;
+        margin-right:10%;
+    }
+    .section  {
+        width:110%; 
+    }
+}
+/*Responsive CSS*/
+/*This styles the body tag when the viewport is less than 1024px.
+It decreases the .section to 33%.  */
+@media screen and (min-width:801px) and (max-width:1024px){
+    .section img{
+        width:33%; 
+    }
+}
+/*Responsive CSS*/
+/*This styles the body tag when the viewport is less than 800px.
+It increases the .section to 50%. */
+@media screen and (min-width:481px) and (max-width:800px){
+    .section img{
+        width:50%;
+    }
+}
+/*Responsive CSS*/
+/*This styles the body when the viewport is less than 480px.
+It increases the .section to 100%. */
+@media screen and (max-width:480px){
+    .section img{
+        width:100%;
+        
+    }
+}

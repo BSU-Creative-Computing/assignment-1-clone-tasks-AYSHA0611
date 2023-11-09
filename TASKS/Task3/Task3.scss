@@ -1,0 +1,135 @@
+/*Screen width range mixin*/
+@mixin breakpoint($minwidth, $maxwidth){
+    @media screen and (min-width:$minwidth) and (max-width:$maxwidth){
+        @content
+    }
+}
+
+$header-footer-color:#8ccff7; /*color for header & footer*/
+$circle-radii:70px 80px 90px 100px; /*radii for circle*/
+$colors:#4e89ae #43658b #ed6663 #ffa372; /*colors for lines & circles*/
+$circles-lines-hover: #444; /*hover color for circles & lines */
+$footer-height:50px;/*height for footer*/
+
+/*element styling for lines width & height*/
+%element-styling{
+    width:100%;
+    height:25px;
+}
+body{
+    margin:0;/*body as margin 0*/
+}
+/*styling of header*/
+header{
+    background-color: $header-footer-color;
+    .img3{
+        @include breakpoint(0px,480px){ /*media query 480px & below*/
+            margin-left: 25%;
+        }
+    }
+    .img2, .img1{
+        @include breakpoint(0px,480px){  
+            display:none;
+        }
+    }
+    .img2{
+        @include breakpoint(481px,800px){ /*media query 481px to 800px*/
+            margin-left:40px;
+        }
+    }
+    .img3, .img1{
+        @include breakpoint(481px,800px){
+            display:none;
+        }
+    }
+    .img3, .img2{
+        @include breakpoint(801px, 2000px){ /*media query 801px to 2000px*/
+            display:none;
+        }
+    }
+    .img1{
+        margin-left:30%;
+    }
+    .img2{
+        margin-left:20%;
+        height:300px;
+    }
+}
+
+    
+/*styling of lines*/
+.container-lines{
+    cursor:pointer; /*makes the container clickable*/
+    :hover{ /*changes the bg color.*/
+    background-color: $circles-lines-hover;
+    }
+}
+/*start of line styling*/
+.line1{
+    @extend %element-styling; //Extend the styling for elements
+    background-color:nth($colors,1); //set the background color to the first color in the array
+}
+//styling of line2
+.line2{
+    @extend %element-styling; //Extend the styling for elements
+    background-color: nth($colors,2); //set the background color to the second color in the array
+}
+//styling of line3
+.line3{
+    @extend %element-styling;//Extend the styling for elements
+    background-color: nth($colors,3); //set the background color to the third color in the array
+}
+//styling of line4
+.line4{
+    @extend %element-styling; //Extend the styling for elements
+    background-color: nth($colors,4);//set the background color to the fourth color in the array
+}
+//end of styling lines
+
+//styling circles
+.container-circles{
+    display:flex; //display circles as flex
+    justify-content:center;//circles to be center 
+    align-items: center;//alignment to be in center 
+    gap:5px;//gap as 5px
+    cursor:pointer; //to make the container clickable
+    :hover{ //changes the bg color
+    background-color:$circles-lines-hover;
+   }
+    @include breakpoint(0px, 620px){ //circle to be vertically when viewport is below 620px
+        flex-direction: column;}// column as flex direction
+}
+//start of styling circles
+.smaller{ //styling of smaller circle 
+    height:50px; //50px as height
+    width:50px;//50px as width
+    border-radius:60%;//60% as radius
+    background-color:nth($colors,1);//set the background color to the first color in the array
+}
+.medium{
+    @extend .smaller;//This extends the basic style to create .medium circle
+    height:60px;//60px as height
+    width:60px;//60px as width
+    background-color:nth($colors,2);//set the background color to the second color in the array
+}
+.bigger{
+    @extend .smaller;//This extends the basic style to create .bigger circle
+    height:70px;//70px as height
+    width:70px;//70px as height
+    background-color: nth($colors,3);//set the background color to the third color in the array.
+}
+.biggest{
+    @extend .smaller;//This extends the basic style to create .biggest circle
+    height:80px;//80px as height
+    width:80px;//80px as width
+    background-color: nth($colors,4);//set the background color to the fourth color in the array
+}
+//end of styling cirlces
+
+//footer
+footer{
+    width:100%;//100% as width
+    background-color: $header-footer-color;//set background color for footer 
+    height:$footer-height;//set height for footer
+}
+

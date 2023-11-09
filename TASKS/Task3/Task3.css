@@ -1,0 +1,125 @@
+/*Screen width range mixin*/
+/*color for header & footer*/
+/*radii for circle*/
+/*colors for lines & circles*/
+/*hover color for circles & lines */
+/*height for footer*/
+/*element styling for lines width & height*/
+.line4, .line3, .line2, .line1 {
+  width: 100%;
+  height: 25px;
+}
+
+body {
+  margin: 0; /*body as margin 0*/
+}
+
+/*styling of header*/
+header {
+  background-color: #8ccff7;
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  header .img3 { /*media query 480px & below*/
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  header .img2, header .img1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  header .img2 { /*media query 481px to 800px*/
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  header .img3, header .img1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 2000px) {
+  header .img3, header .img2 { /*media query 801px to 2000px*/
+    display: none;
+  }
+}
+header .img1 {
+  margin-left: 30%;
+  height: 400px;
+}
+header .img2 {
+  margin-left: 20%;
+  height: 300px;
+}
+
+/*styling of lines*/
+.container-lines {
+  cursor: pointer; /*makes the container clickable*/
+}
+.container-lines :hover { /*changes the bg color.*/
+  background-color: #444;
+}
+
+/*start of line styling*/
+.line1 {
+  background-color: #4e89ae;
+}
+
+.line2 {
+  background-color: #43658b;
+}
+
+.line3 {
+  background-color: #ed6663;
+}
+
+.line4 {
+  background-color: #ffa372;
+}
+
+.container-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.container-circles :hover {
+  background-color: #444;
+}
+@media screen and (min-width: 0px) and (max-width: 620px) {
+  .container-circles {
+    flex-direction: column;
+  }
+}
+
+.smaller, .biggest, .bigger, .medium {
+  height: 50px;
+  width: 50px;
+  border-radius: 60%;
+  background-color: #4e89ae;
+}
+
+.medium {
+  height: 60px;
+  width: 60px;
+  background-color: #43658b;
+}
+
+.bigger {
+  height: 70px;
+  width: 70px;
+  background-color: #ed6663;
+}
+
+.biggest {
+  height: 80px;
+  width: 80px;
+  background-color: #ffa372;
+}
+
+footer {
+  width: 100%;
+  background-color: #8ccff7;
+  height: 50px;
+}/*# sourceMappingURL=Task3.css.map */
